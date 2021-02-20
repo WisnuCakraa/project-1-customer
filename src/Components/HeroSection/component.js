@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import { IMAGES } from "../../Utils";
+import { IMAGES } from "../../Configs";
 import { Button } from "../Button";
 import "./style.css";
 
@@ -11,7 +11,7 @@ function HeroSection() {
       <img src={IMAGES.KANOPI} />
       <h1>BENGKEL LAS</h1>
       <p>Test Descrip</p>
-      {/* <div className="hero-btns">
+      <div className="hero-btns">
         <Button
           className="btns"
           buttonStyle="btn--outline"
@@ -19,15 +19,7 @@ function HeroSection() {
         >
           GET STARTED
         </Button>
-        <Button
-          className="btns"
-          buttonStyle="btn--primary"
-          buttonSize="btn--large"
-          onClick={console.log("hey")}
-        >
-          WATCH TRAILER <i className="far fa-play-circle" />
-        </Button>
-      </div> */}
+      </div>
     </div>
   );
 }
