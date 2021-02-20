@@ -1,9 +1,10 @@
 import React from "react";
+import HeroSection from "../../Components/HeroSection";
 
 export default function component() {
   return (
     <div>
-      <h1>asd</h1>
+      <HeroSection />
     </div>
   );
 }
