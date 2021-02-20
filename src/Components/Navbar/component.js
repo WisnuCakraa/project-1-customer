@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "../Button";
 import { Link } from "react-router-dom";
 import "./style.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
   const [nav, setNav] = useState("");
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
 
   const showNav = () => {
     window.addEventListener("scroll", () => {
@@ -32,11 +22,8 @@ function Navbar() {
   };
 
   useEffect(() => {
-    showButton();
     showNav();
   }, []);
-
-  window.addEventListener("resize", showButton);
 
   return (
     <>
@@ -74,7 +61,6 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
         </div>
       </nav>
     </>
