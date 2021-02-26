@@ -62,7 +62,7 @@
   align-items: flex-start;
   margin: 16px;
   text-align: left;
-  width: 190px;
+  width: 175px;
   box-sizing: border-box;
 }
 
@@ -99,6 +99,16 @@
   font-size: 24px;
 }
 
+.social-icon-telp {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.social-icon-telp > small {
+  color: whitesmoke;
+  margin-left: 0.2rem;
+}
+
 .social-media {
   max-width: 1000px;
   width: 100%;
@@ -106,7 +116,7 @@
 
 .social-media-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 90%;
   max-width: 1000px;
@@ -115,12 +125,9 @@
 
 .social-icons {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 240px;
-}
-
-.social-icons > a:nth-child(2) {
-  margin-left: 3rem;
 }
 
 .social-logo {
@@ -163,4 +170,9 @@
 }
 
 @media screen and (max-width: 768px) {
+}
+
+.map-info {
+  font-size: 1rem;
+  margin-left: 0.5rem;
 }
