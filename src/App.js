@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
         {routerApp.map((item, index) => {
           const { path, compt, exact } = item;

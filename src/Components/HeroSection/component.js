@@ -1,25 +1,36 @@
 import React from "react";
-import "../../App.css";
-import { IMAGES } from "../../Configs";
-import { Button } from "../Button";
+import { Link } from "react-scroll";
+
+import Button from "../../Components/Button";
 import "./style.css";
 
-function HeroSection() {
+function HeroSection({
+  title,
+  subTitle,
+  getStarted,
+  images,
+  scrollTo,
+  durations,
+}) {
   return (
     <div className="hero-container">
-      {/* <video src="/video-2.mp4" autoPlay loop muted /> */}
-      <img src={IMAGES.KANOPI} />
-      <h1>BENGKEL LAS</h1>
-      <p>Test Descrip</p>
-      <div className="hero-btns">
-        <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-        >
-          GET STARTED
-        </Button>
-      </div>
+      <img src={images} />
+      <h1>{title}</h1>
+      <p>{subTitle}</p>
+      {getStarted && (
+        <div className="hero-btns">
+          <Button
+            scrollTo={scrollTo}
+            smooth
+            durations={durations}
+            className="btns"
+            buttonStyle="btn--outline"
+            buttonSize="btn--large"
+          >
+            GET STARTED
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

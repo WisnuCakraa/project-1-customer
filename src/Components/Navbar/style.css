@@ -68,6 +68,7 @@
 }
 
 .nav-links:hover {
+  color: aqua;
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
