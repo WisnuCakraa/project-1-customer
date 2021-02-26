@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import "./style.css";
 
 function Navbar() {
@@ -29,9 +30,11 @@ function Navbar() {
     <>
       <nav className={`navbar ${nav}`}>
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            logo
-            {/* <i class="fab fa-typo3" /> */}
+          <Link className="navbar-logo" onClick={closeMobileMenu}>
+            <div onClick={() => scroll.scrollToTop()}>
+              LMC
+              <i class="fab fa-typo3" />
+            </div>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -44,11 +47,11 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/services"
+                to="/galery"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Services
+                Galery
               </Link>
             </li>
             <li className="nav-item">
