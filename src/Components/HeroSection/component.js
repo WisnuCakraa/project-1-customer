@@ -1,9 +1,17 @@
 import React from "react";
-import "../../App.css";
-import { Button } from "../Button";
+import { Link } from "react-scroll";
+
+import Button from "../../Components/Button";
 import "./style.css";
 
-function HeroSection({ images, title, subTitle, getStarted }) {
+function HeroSection({
+  title,
+  subTitle,
+  getStarted,
+  images,
+  scrollTo,
+  durations,
+}) {
   return (
     <div className="hero-container">
       <img src={images} />
@@ -12,6 +20,9 @@ function HeroSection({ images, title, subTitle, getStarted }) {
       {getStarted && (
         <div className="hero-btns">
           <Button
+            scrollTo={scrollTo}
+            smooth
+            durations={durations}
             className="btns"
             buttonStyle="btn--outline"
             buttonSize="btn--large"
