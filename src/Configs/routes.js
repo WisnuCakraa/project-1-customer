@@ -3,6 +3,10 @@ const routes = {
     return "/";
   },
 
+  GALERY() {
+    return "/galery";
+  },
+
   FACEBOOK() {
     return "https://www.facebook.com/wisnucakraa";
   },
